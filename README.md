@@ -196,18 +196,6 @@ npm run preview
 
 ---
 
-# 📸 Screenshots
-
-You can add screenshots here:
-
-- Dashboard
-- Knowledge Hub
-- AI Copilot
-- Documents
-- Asset Details
-
----
-
 # 💡 Future Enhancements
 
 - Real-time IoT integration
