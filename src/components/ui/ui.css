@@ -1,0 +1,120 @@
+/* ========================================
+   UI COMPONENTS — Button, Card, Badge, Table
+   ======================================== */
+
+/* === BUTTON === */
+.pm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  line-height: 1;
+}
+.pm-btn:hover { transform: translateY(-1px); }
+.pm-btn:active { transform: translateY(0); }
+.pm-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.pm-btn-primary { background: var(--color-primary-blue); color: #fff; }
+.pm-btn-primary:hover { background: var(--color-primary-blue-hover); box-shadow: 0 4px 12px rgba(47,107,255,0.3); }
+
+.pm-btn-secondary { background: var(--bg-secondary); border-color: var(--border-color); color: var(--text-primary); }
+.pm-btn-secondary:hover { border-color: var(--text-muted); background: var(--bg-hover); }
+
+.pm-btn-danger { background: var(--color-critical); color: #fff; }
+.pm-btn-danger:hover { background: #d64e5c; }
+
+.pm-btn-ghost { background: transparent; color: var(--text-secondary); }
+.pm-btn-ghost:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
+
+.pm-btn-sm { padding: 5px 10px; font-size: 12px; }
+.pm-btn-xs { padding: 3px 8px; font-size: 11px; }
+
+/* === CARD === */
+.pm-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: var(--card-pad);
+  transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+  box-shadow: var(--shadow-card);
+}
+.pm-card.clickable { cursor: pointer; }
+.pm-card.clickable:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-1px);
+  border-color: rgba(47,107,255,0.25);
+}
+
+/* === BADGE === */
+.pm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.pm-badge-default { background: rgba(169,180,197,0.1); color: var(--text-secondary); }
+.pm-badge-success { background: rgba(20,195,142,0.1); color: var(--color-success); }
+.pm-badge-warning { background: rgba(246,183,60,0.12); color: var(--color-warning); }
+.pm-badge-critical { background: rgba(244,91,105,0.12); color: var(--color-critical); }
+
+/* === TABLE === */
+.pm-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+}
+
+.pm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.pm-table-head {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color);
+  background: rgba(0,0,0,0.12);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.pm-table-row {
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background var(--transition-fast);
+}
+.pm-table-row:last-child { border-bottom: none; }
+.pm-table-row:hover { background: rgba(255,255,255,0.025); }
+.pm-table-row.clickable { cursor: pointer; }
+.pm-table-row.clickable:hover { background: rgba(47,107,255,0.04); }
+
+.pm-table-cell {
+  padding: 10px 14px;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  vertical-align: middle;
+}
+
+.pm-table-cell.muted { color: var(--text-secondary); }
